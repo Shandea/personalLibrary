@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+/* Body Styling */
+body {
+  font-family:sans-serif;
+  margin: 25px;
+  color: #222;
+  background-image: url(images/Books/pexels-janko-ferlic-590493.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Border Styling */
+.whiteBorder{
+  background-image: url(images/Books/pexels-janko-ferlic-590493.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px ridge white;
+  border-radius: 15px;
+  /* box-shadow: 5px 5px rgba(255, 255, 255, 0.541); */
+  box-shadow: 5px 5px black;
+  /* opacity: 90%; */
+  color: white;
+  text-shadow: 2px 2px 2px darkblue;
+  text-align: center; 
+  font-weight: bold;
+}
+/* Text Shadow Styling */
+/* .textShadow{
+text-shadow: 1px 1px rgb(90, 87, 87); 
+text-shadow: 1px 1px purple;
+color: white; 
+} */
+/* Personal Library Title Container Styling */
+.libraryTitleContainer{
+  margin-top: 5%;
+}
+/* Books Title Display */
+/* .books{
+  text-decoration-line: underline;
+} */
+/* Comments Title Display*/
+.comments{
+  text-decoration-line: underline; 
+  font-weight: bold;
+}
+/* Comment Display Styling */
+.commentStyling{
+  font-style: italic;
+}
+/* Book Title and Comment Display List */
+.bookTitleAndCommentDisplay{
+  float: left;
+  width: 35%;
+  margin: 3.5% 2% 0% 10%;  
+  padding: 2%;
+}
+/* Delete Title Styling */
+a{
+  color: black;
+}
+.delete:hover{
+   transform: scale(1.1);
+}  
+/* Container For Form */
+.formContainer{
+  float: right;
+  margin: 3.5% 10% 0% 0%;
+  color: white;
+  padding: 15px;
+}
+/* Form Styling */
+form {
+  padding: 15px;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 15px;
+  border: 2px ridge black; 
+  /* box-shadow: 5px 5px rgba(255, 255, 255, 0.541); */
+  box-shadow: 5px 5px black;
+  opacity: 80%;
+  text-align: center;
+} 
+/* Input Styling */
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+/* Input For Submit Section Styling */
+input[type=submit] {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #E4F1FE;
+  border: 1px solid grey;
+  box-shadow: 2px 2px #999;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #FFFEC4;
+}
+

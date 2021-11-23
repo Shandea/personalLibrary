@@ -1,0 +1,51 @@
+html
+  head
+    title Personal Library
+    meta(name='description', content='A cool thing made with Glitch')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- link for styling css bootstrap materialize etc
+    link(rel='stylesheet', href='/public/style.css')
+    //- script for everything else
+    script(src='/public/client.js')
+  body
+    div.libraryTitleContainer.whiteBorder.textShadow
+        h1.border.center Personal Library
+    section.bookTitleAndCommentDisplay.whiteBorder
+        h2.center#pug-success-message
+        h2.books.textShadow Books
+        | #{title}
+
+        p#pug-variable= message
+        p#book-display
+        for book in books
+            li #{book.title}
+            p.comments Comments: #{book.count}
+             for comment in book.comments
+                li.commentStyling #{comment}
+                div.delete
+                  a(href='api/delete/' + book.id)   
+                   h3 Delete
+            
+    
+    aside.formContainer.whiteBorder.textShadow
+        div.createNewBook
+            h3 Create New Book Title
+                form(action='/api/books', method='post')
+                  div
+                    input(id= "bookTitle", type="text", name="bookTitle", placeholder="Book Title")
+                  div
+                    input(type='submit', value='Add Book')
+        div.addComment     
+            h3 Add Comment  
+                form(action='/api/books/comment', method="post")
+                  div
+                    input(id="bookid", type="text", name="bookid", placeholder="Book Title")
+                  div
+                    input(id="comment", type="text", name="comment", placeholder="Comment")
+                  div
+                    input(type="submit", value="Add Comment") 
+
+
+     
